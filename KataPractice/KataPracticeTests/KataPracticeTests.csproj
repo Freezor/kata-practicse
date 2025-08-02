@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="FizzBuzz\" />
+      <ProjectReference Include="..\KataPractice\KataPractice.csproj" />
     </ItemGroup>
 
 </Project>

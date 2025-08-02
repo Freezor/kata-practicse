@@ -8,10 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="FIzzBuzz\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Content Include="..\..\README.md">
         <Link>README.md</Link>
       </Content>
