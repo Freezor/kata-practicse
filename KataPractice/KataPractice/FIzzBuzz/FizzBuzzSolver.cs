@@ -4,6 +4,6 @@ public class FizzBuzzSolver
 {
     public string Run(int number)
     {
-        return number < 1 ? "#" : number.ToString();
+        return number is < 1 or > 100? "#" : number.ToString();
     }
 }
