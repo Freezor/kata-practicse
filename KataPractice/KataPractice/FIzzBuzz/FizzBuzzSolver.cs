@@ -4,6 +4,6 @@ public class FizzBuzzSolver
 {
     public string Run(int number)
     {
-        throw new NotImplementedException();
+        return number.ToString();
     }
 }
