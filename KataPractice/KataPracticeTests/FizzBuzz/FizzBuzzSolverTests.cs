@@ -20,4 +20,13 @@ public class FizzBuzzSolverTests
         new FizzBuzzSolver().Run(number).ShouldBe("#");
     }
 
+    [Theory]
+    [InlineData(101)]
+    [InlineData(200)]
+    [InlineData(short.MaxValue)]
+    public void Run_ReturnsHashtag_WhenNumberIsBiggerThan100(int number)
+    {
+        new FizzBuzzSolver().Run(number).ShouldBe("#");
+    }
+
 }
