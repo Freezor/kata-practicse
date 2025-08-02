@@ -11,10 +11,13 @@ public class FizzBuzzSolverTests
         new FizzBuzzSolver().Run(1).ShouldBe("1");
     }
 
-    [Fact]
-    public void Run_ReturnsHashtag_WhenNumberIsSmallerThanOne()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-1)]
+    [InlineData(short.MinValue)]
+    public void Run_ReturnsHashtag_WhenNumberIsSmallerThanOne(int number)
     {
-        new FizzBuzzSolver().Run(-1).ShouldBe("#");
+        new FizzBuzzSolver().Run(number).ShouldBe("#");
     }
 
 }
