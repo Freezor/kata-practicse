@@ -71,4 +71,33 @@ public class FizzBuzzSolverTests
         // Arrange & Act & Assert
         Assert.Throws<ArgumentOutOfRangeException>("number", () => new FizzBuzzSolver().PrintFizzBuzzUpTo(invalidLimit));
     }
+
+    [Fact]
+    public void PrintFizzBuzzUpTo_GivenLimit_ReturnsCorrectSequence()
+    {
+        // Arrange
+        const string expected = """
+                                1
+                                2
+                                Fizz
+                                4
+                                Buzz
+                                Fizz
+                                7
+                                8
+                                Fizz
+                                Buzz
+                                11
+                                Fizz
+                                13
+                                14
+                                FizzBuzz
+                                """;
+
+        // Act
+        var result = new FizzBuzzSolver().PrintFizzBuzzUpTo(15);
+
+        // Assert
+        result.ShouldBe(expected);
+    }
 }
