@@ -4,6 +4,14 @@ public class FizzBuzzSolver
 {
     public string Run(int number)
     {
-        return number is < 1 or > 100? "#" : number.ToString();
+        if (number is < 1 or > 100)
+            return "#";
+
+        if (number % 3 == 0)
+        {
+            return "Fizz";
+        }
+        
+        return number.ToString();
     }
 }
