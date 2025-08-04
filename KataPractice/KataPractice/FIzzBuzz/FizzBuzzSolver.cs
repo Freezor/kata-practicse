@@ -2,7 +2,7 @@ namespace KataPractice.FIzzBuzz;
 
 public class FizzBuzzSolver
 {
-    public string Run(int number)
+    public string GetFizzBuzzValue(int number)
     {
         if (number is < 1 or > 100)
             return "#";

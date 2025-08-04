@@ -8,7 +8,7 @@ public class FizzBuzzSolverTests
     [Fact]
     public void Run_ReturnsNumberAsString()
     {
-        new FizzBuzzSolver().Run(1).ShouldBe("1");
+        new FizzBuzzSolver().GetFizzBuzzValue(1).ShouldBe("1");
     }
 
     [Theory]
@@ -17,7 +17,7 @@ public class FizzBuzzSolverTests
     [InlineData(short.MinValue)]
     public void Run_ReturnsHashtag_WhenNumberIsSmallerThanOne(int number)
     {
-        new FizzBuzzSolver().Run(number).ShouldBe("#");
+        new FizzBuzzSolver().GetFizzBuzzValue(number).ShouldBe("#");
     }
 
     [Theory]
@@ -26,7 +26,7 @@ public class FizzBuzzSolverTests
     [InlineData(short.MaxValue)]
     public void Run_ReturnsHashtag_WhenNumberIsBiggerThan100(int number)
     {
-        new FizzBuzzSolver().Run(number).ShouldBe("#");
+        new FizzBuzzSolver().GetFizzBuzzValue(number).ShouldBe("#");
     }
 
     [Theory]
@@ -36,7 +36,7 @@ public class FizzBuzzSolverTests
     [InlineData(33)]
     public void Run_ReturnsFizz_ForMultiplesOfThree(int number)
     {
-        new FizzBuzzSolver().Run(number).ShouldBe("Fizz");
+        new FizzBuzzSolver().GetFizzBuzzValue(number).ShouldBe("Fizz");
     }
 
     [Theory]
@@ -48,7 +48,7 @@ public class FizzBuzzSolverTests
     [InlineData(95)]
     public void Run_ReturnsBuzz_ForMultiplesOfFive(int number)
     {
-        new FizzBuzzSolver().Run(number).ShouldBe("Buzz");
+        new FizzBuzzSolver().GetFizzBuzzValue(number).ShouldBe("Buzz");
     }
 
     [Theory]
@@ -60,6 +60,6 @@ public class FizzBuzzSolverTests
     [InlineData(90)]
     public void Run_ReturnsFizzBuzz_ForMultiplesOfThreeAndFive(int number)
     {
-        new FizzBuzzSolver().Run(number).ShouldBe("FizzBuzz");
+        new FizzBuzzSolver().GetFizzBuzzValue(number).ShouldBe("FizzBuzz");
     }
 }
