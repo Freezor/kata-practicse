@@ -35,7 +35,7 @@ public class FizzBuzzSolverTests
     [InlineData(9)]
     [InlineData(90)]
     [InlineData(33)]
-    public void Run_ReturnsBuzz_ForMultiplesOfThree(int number)
+    public void Run_ReturnsFizz_ForMultiplesOfThree(int number)
     {
         new FizzBuzzSolver().Run(number).ShouldBe("Fizz");
     }
