@@ -33,7 +33,6 @@ public class FizzBuzzSolverTests
     [InlineData(3)]
     [InlineData(6)]
     [InlineData(9)]
-    [InlineData(90)]
     [InlineData(33)]
     public void Run_ReturnsFizz_ForMultiplesOfThree(int number)
     {
