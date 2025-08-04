@@ -69,6 +69,6 @@ public class FizzBuzzSolverTests
     public void PrintFizzBuzzUpTo_GivenInvalidLimit_ThrowsArgumentOutOfRangeException(int invalidLimit)
     {
         // Arrange & Act & Assert
-        Assert.Throws<ArgumentOutOfRangeException>("limit", () => new FizzBuzzSolver().PrintFizzBuzzUpTo(invalidLimit));
+        Assert.Throws<ArgumentOutOfRangeException>("number", () => new FizzBuzzSolver().PrintFizzBuzzUpTo(invalidLimit));
     }
 }

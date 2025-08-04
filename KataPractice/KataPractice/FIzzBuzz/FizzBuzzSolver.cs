@@ -18,6 +18,11 @@ public class FizzBuzzSolver
 
     public string PrintFizzBuzzUpTo(int number)
     {
-        throw new NotImplementedException();
+        if (number is < 1 or > 100)
+        {
+            throw new ArgumentOutOfRangeException(nameof(number), "Number must be between 1 and 100");
+        }
+
+        return string.Empty;
     }
 }
