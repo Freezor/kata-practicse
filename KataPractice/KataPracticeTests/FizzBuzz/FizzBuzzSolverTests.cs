@@ -29,4 +29,14 @@ public class FizzBuzzSolverTests
         new FizzBuzzSolver().Run(number).ShouldBe("#");
     }
 
+    [Theory]
+    [InlineData(3)]
+    [InlineData(6)]
+    [InlineData(9)]
+    [InlineData(90)]
+    [InlineData(33)]
+    public void Run_ReturnsBuzz_ForMultiplesOfThree(int number)
+    {
+        new FizzBuzzSolver().Run(number).ShouldBe("Fizz");
+    }
 }
