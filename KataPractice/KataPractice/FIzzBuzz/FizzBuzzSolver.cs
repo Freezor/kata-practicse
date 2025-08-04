@@ -6,13 +6,13 @@ public class FizzBuzzSolver
     {
         if (number is < 1 or > 100)
             return "#";
-
-        var result = string.Empty;
-        if (number % 3 == 0)
-            result += "Fizz";
-        if (number % 5 == 0)
-            result += "Buzz";
-
-        return string.IsNullOrEmpty(result) ? number.ToString() : result;
+ 
+        return (number % 3, number % 5) switch
+        {
+            (0, 0) => "FizzBuzz",
+            (0, _) => "Fizz",
+            (_, 0) => "Buzz",
+            _ => number.ToString(),
+        };
     }
 }
