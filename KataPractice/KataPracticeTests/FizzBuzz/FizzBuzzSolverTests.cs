@@ -62,4 +62,13 @@ public class FizzBuzzSolverTests
     {
         new FizzBuzzSolver().GetFizzBuzzValue(number).ShouldBe("FizzBuzz");
     }
+
+    [Theory]
+    [InlineData(0)]
+    [InlineData(101)]
+    public void PrintFizzBuzzUpTo_GivenInvalidLimit_ThrowsArgumentOutOfRangeException(int invalidLimit)
+    {
+        // Arrange & Act & Assert
+        Assert.Throws<ArgumentOutOfRangeException>("limit", () => new FizzBuzzSolver().PrintFizzBuzzUpTo(invalidLimit));
+    }
 }

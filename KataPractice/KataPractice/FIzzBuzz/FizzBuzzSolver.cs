@@ -15,4 +15,9 @@ public class FizzBuzzSolver
             _ => number.ToString(),
         };
     }
+
+    public string PrintFizzBuzzUpTo(int number)
+    {
+        throw new NotImplementedException();
+    }
 }
