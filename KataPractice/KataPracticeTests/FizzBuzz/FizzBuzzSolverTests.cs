@@ -39,4 +39,17 @@ public class FizzBuzzSolverTests
     {
         new FizzBuzzSolver().Run(number).ShouldBe("Fizz");
     }
+    
+    [Theory]
+    [InlineData(5)]
+    [InlineData(10)]
+    [InlineData(20)]
+    [InlineData(25)]
+    [InlineData(50)]
+    [InlineData(95)]
+    public void Run_ReturnsBuzz_ForMultiplesOfFive(int number)
+    {
+        new FizzBuzzSolver().Run(number).ShouldBe("Buzz");
+    }
+    
 }
