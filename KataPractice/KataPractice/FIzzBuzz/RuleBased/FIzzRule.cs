@@ -1,6 +1,6 @@
 namespace KataPractice.FIzzBuzz.RuleBased;
 
-public class FizzRule
+public class FizzRule : IRule
 {
     private const int    Divisor     = 3;
     private const string Replacement = "Fizz";
