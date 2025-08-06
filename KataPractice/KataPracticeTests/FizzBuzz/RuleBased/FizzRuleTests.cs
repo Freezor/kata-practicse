@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using KataPractice.FIzzBuzz.RuleBased;
+using Shouldly;
 
 namespace KataPracticeTests.FizzBuzz.RuleBased;
 
@@ -13,7 +14,7 @@ public class FizzRuleTests
 
         var result = rule.Apply(3);
 
-        Assert.Equal("Fizz", result);
+        result.ShouldBe("Fizz");
     }
 
     [Fact]
@@ -23,6 +24,6 @@ public class FizzRuleTests
 
         var result = rule.Apply(4);
 
-        Assert.Equal("Fizz", result);
+        result.ShouldBeEmpty();
     }
 }
