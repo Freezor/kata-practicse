@@ -16,4 +16,13 @@ public class BuzzRuleTests
 
         result.ShouldBe("Buzz");
     }
+    [Fact]
+    public void Apply_ReturnsEmpty_WhenNumberIsNotDivisibleBy5()
+    {
+        var rule = new BuzzRule();
+
+        var result = rule.Apply(6);
+
+        result.ShouldBeEmpty();
+    }
 }
