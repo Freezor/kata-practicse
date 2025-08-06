@@ -1,7 +1,9 @@
+using JetBrains.Annotations;
 using KataPractice.FIzzBuzz.RuleBased;
 
 namespace KataPracticeTests.FizzBuzz.RuleBased;
 
+[TestSubject(typeof(FizzRule))]
 public class FizzRuleTests
 {
     [Fact]
@@ -13,6 +15,7 @@ public class FizzRuleTests
 
         Assert.Equal("Fizz", result);
     }
+
     [Fact]
     public void Apply_ReturnsEmpty_WhenNumberIsNotDivisibleBy3()
     {
